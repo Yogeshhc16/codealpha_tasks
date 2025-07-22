@@ -36,4 +36,4 @@ while incorrect_guesses < max_incorrect:
         print("Congratulations! You guessed the word!")
         break
     else:
-    print(f"Game over! The word was: {secret_word}")
+     print(f"Game over! The word was: {secret_word}")
