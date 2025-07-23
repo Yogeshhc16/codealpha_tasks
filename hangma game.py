@@ -1,7 +1,7 @@
 import random
-# 1. Predefined list of 7 words
-word_list = ["apple", "house", "train", "plant", "candy","priya","vikas"]
-# 2. Choose a random word from the list
+# 1. Predefined list of words
+word_list = ["apple", "house", "train", "plant", "candy", "priya", "vikas"]
+# 2. Select a random word from the list
 secret_word = random.choice(word_list)
 guessed_letters = []
 max_incorrect = 6
@@ -35,5 +35,6 @@ while incorrect_guesses < max_incorrect:
     if all(letter in guessed_letters for letter in secret_word):
         print("Congratulations! You guessed the word!")
         break
-    else:
-     print(f"Game over! The word was: {secret_word}")
+# If the player used all attempts and didn't guess the word
+if incorrect_guesses == max_incorrect:
+    print(f"Game over! The word was: {secret_word}")
